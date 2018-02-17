@@ -1,0 +1,340 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{89E3E216-A41F-4E5D-AC73-8AAA5B8B45B4}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>XuliOrganizzer</RootNamespace>
+    <AssemblyName>XuliOrganizzer</AssemblyName>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ApplicationIcon>appl.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == '111|AnyCPU' ">
+    <OutputPath>bin\111\</OutputPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="Microsoft.VisualBasic.PowerPacks.Vs, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="cConfig.cs" />
+    <Compile Include="CommonFunctions.cs" />
+    <Compile Include="cTask.cs" />
+    <Compile Include="cTaskWorker.cs" />
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAbout.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAbout.designer.cs">
+      <DependentUpon>frmAbout.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAdd.Designer.cs">
+      <DependentUpon>frmAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAddTask.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAddTask.Designer.cs">
+      <DependentUpon>frmAddTask.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAllNotes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAllNotes.Designer.cs">
+      <DependentUpon>frmAllNotes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmExit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmExit.designer.cs">
+      <DependentUpon>frmExit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmLogView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLogView.Designer.cs">
+      <DependentUpon>frmLogView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMainBeh.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMainBeh.designer.cs">
+      <DependentUpon>frmMainBeh.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMessage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMessage.Designer.cs">
+      <DependentUpon>frmMessage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmNote.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmNote.Designer.cs">
+      <DependentUpon>frmNote.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmOptions.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmOptions.Designer.cs">
+      <DependentUpon>frmOptions.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSoundFile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSoundFile.Designer.cs">
+      <DependentUpon>frmSoundFile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmTimer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTimer.Designer.cs">
+      <DependentUpon>frmTimer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmTimerSettings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTimerSettings.Designer.cs">
+      <DependentUpon>frmTimerSettings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MainDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAbout.resx">
+      <DependentUpon>frmAbout.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAdd.resx">
+      <DependentUpon>frmAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAddTask.resx">
+      <DependentUpon>frmAddTask.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAllNotes.resx">
+      <DependentUpon>frmAllNotes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmExit.resx">
+      <DependentUpon>frmExit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLogView.resx">
+      <DependentUpon>frmLogView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMainBeh.resx">
+      <DependentUpon>frmMainBeh.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMessage.resx">
+      <DependentUpon>frmMessage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmNote.resx">
+      <DependentUpon>frmNote.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmOptions.resx">
+      <DependentUpon>frmOptions.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSoundFile.resx">
+      <DependentUpon>frmSoundFile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTimer.resx">
+      <DependentUpon>frmTimer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTimerSettings.resx">
+      <DependentUpon>frmTimerSettings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Clock1.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Clock2.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Clock3.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Clock4.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\close24x24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\standpresets32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\plus16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\minus16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\stop.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\stop64x64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\start64x64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pause.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\reset64x64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\alarm.wav" />
+    <None Include="Resources\lcdnova.ttf" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\settings24x24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sound32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="MainDataSet.xsc">
+      <DependentUpon>MainDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="MainDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>MainDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="MainDataSet.xss">
+      <DependentUpon>MainDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Resources\opensoundfile.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ok32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\close32x321.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\knopka24x24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\knopka2_24x24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\reset24x24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\save24x24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\save24x241.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wordwarp_on24x24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\font24x24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\newfile24x24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wordwarp_off24x24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\right24x24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\left24x24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\showallrec24x24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\showpanel24x24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\showpanel_off24x24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Trash.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AddTime64x64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\complete64x64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\question1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="appl.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
