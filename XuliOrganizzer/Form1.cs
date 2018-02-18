@@ -578,8 +578,14 @@ namespace XuliOrganizzer
             DialogResult Ans = MessageBox.Show("Окончательно удалить задачу " +
                 dr["Name"].ToString() + "?\r\nОтменить будет невозможно!",
                 "Удаление задачи", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
-            if (Ans == DialogResult.No) return;            
-            
+            if (Ans == DialogResult.No) return;
+
+            //определение, удаляется ли последняя строка в гриде
+            bool LastRow = false;
+            int gridy = grdMain.CurrentCellAddress.Y;
+            int gridx = grdMain.CurrentCellAddress.X;
+            if (gridy == (grdMain.Rows.Count - 1)) LastRow = true;
+
             //удаление задачи
             cConfig.dsConfig.Tables["Tasks"].Rows.Remove(dr);
             //выгружаем из списка запущенных, если есть
@@ -591,6 +597,13 @@ namespace XuliOrganizzer
             }
             FindRows = null;
 
+            if (LastRow)
+            {
+                if (grdMain.Rows.Count > 0)
+                {
+                    grdMain.Rows[grdMain.Rows.Count - 1].Cells[gridx].Selected = true;
+                }
+            }
         }
 
         private void grdMain_RowPrePaint(object sender, DataGridViewRowPrePaintEventArgs e)

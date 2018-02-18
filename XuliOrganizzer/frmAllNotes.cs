@@ -280,14 +280,21 @@ namespace XuliOrganizzer
         }
 
         private void mnuEditDelete_Click(object sender, EventArgs e)
-        {
+        {            
             //поиск
             DataRow dr = CurRec("Notes");
             if (dr == null) return;
-
+            
             DialogResult Ans = MessageBox.Show("Удалить запись " + dr["Caption"].ToString() + "?",
                 "Удаление", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (Ans == DialogResult.No) return;
+
+            //определение, удаляется ли последняя строка в гриде
+            bool LastRow = false;
+            int gridy = grdMain.CurrentCellAddress.Y;            
+            int gridx = grdMain.CurrentCellAddress.X;
+            if (gridy == (grdMain.Rows.Count - 1)) LastRow = true;
+
 
             //копирование в корзину
             cConfig.dsConfig.Tables["TrashNotes"].Rows.Add(null,
@@ -302,6 +309,14 @@ namespace XuliOrganizzer
             }
 
             FindRows = null;
+
+            if (LastRow)
+            {
+                if (grdMain.Rows.Count > 0)
+                {
+                    grdMain.Rows[grdMain.Rows.Count-1].Cells[gridx].Selected = true;
+                }
+            }
 
         }
 
